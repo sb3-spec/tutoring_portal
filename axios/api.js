@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const hostname =  process.env.SITE_URL_TESTING;
+const hostname =  process.env.PRODUCTION_URL;
 
 
 export const api = axios.create({
