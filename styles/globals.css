@@ -200,7 +200,6 @@ textarea:focus-visible {
 
 .analysis-container {
   max-height: 80%;
-  cursor: pointer;
   transition: all 100ms;
 }
 
