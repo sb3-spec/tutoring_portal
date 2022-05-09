@@ -44,6 +44,7 @@ ul, ol {
   text-align: center;
 }
 
+
 .root__outer {
   display: flex;
   height: 100vh;
@@ -73,7 +74,7 @@ ul, ol {
 }
 
 .session-form__title {
-  color: var(--bg-main);
+  color: var(--accent-white);
 }
 
 .error-container {
@@ -112,7 +113,7 @@ ul, ol {
 
 .form-field > label {
   margin: 3em 1em;
-  color: var(--accent-color);
+  color: var(--bg-main);
   font-weight: bold;
 }
 
@@ -138,9 +139,14 @@ ul, ol {
   font-size: var(--input-font-size);
   font-weight: bold;
   border: none;
-  color: var(--bg-main);
-  background-color: var(--accent-white);
+  color: var(--accent-white);
+  background-color: var(--bg-main);
   transition: all 100ms ease-in;
+}
+
+::-webkit-calendar-picker-indicator { 
+  background-color: var(--accent-white); 
+  cursor: pointer;
 }
 
 .form-field > input:focus-visible {
@@ -155,8 +161,8 @@ ul, ol {
   font-size: 1em;
   border-radius: 5px;
   border: none;
-  background-color: var(--clr-light-blue);
-  color: var(--bg-dark);
+  background-color: var(--bg-main);
+  color: var(--accent-white);
   transition: all 200ms;
 }
 
@@ -189,17 +195,13 @@ textarea:focus-visible {
 }
 
 .analysis-title {
-  color: var(--clr-red);
+  color: var(--accent-white);
 }
 
 .analysis-container {
   max-height: 80%;
   cursor: pointer;
   transition: all 100ms;
-}
-
-.analysis-container:hover {
-  transform: scale(1.01)
 }
 
 .snapshot__outer {
@@ -272,6 +274,7 @@ select:focus-visible {
 
 .text-bold {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .invoice-item {
@@ -282,6 +285,14 @@ select:focus-visible {
 .total_owed {
   color: var(--clr-money)
 }
+
+.monthly-search__outer > select {
+  background-color: var(--bg-main);
+  color: var(--accent-white);
+  font-size: 17px;
+  font-weight: bold;
+}
+
 /* !NAVBAR is below! */
 
 
