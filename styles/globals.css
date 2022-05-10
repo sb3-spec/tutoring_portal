@@ -22,14 +22,20 @@ ul, ol {
 }
 
 :root {
-  --bg-main: rgb(12, 11, 26);
-  --white-faded: rgb(166, 166, 212);
+  --bg-main: rgb(15, 14, 31);
+  --white-faded: rgb(58, 58, 92);
+  --clr-gray: #777777;
+  --clr-dark-grey: #a0a0a0;
   --accent-white: white;
   --accent-2: #9E005E;
-  --accent-1: #118C4F;
+  --clr-green: #127242;
   --border-radius-1: 5px;
   --default-transition: all 300ms;
   --input-font-style: 12px;
+}
+
+.money {
+  color: var(--clr-green);
 }
 
 .hub__outer {
@@ -67,14 +73,14 @@ ul, ol {
   margin: 0 10em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: var(--border-radius-1);
-  background-color: var(--white-faded);
+  background-color: var(--clr-dark-grey);
   opacity: .8;
   color: var(--bg-main)
   /* padding-top: 13px; */
 }
 
 .session-form__title {
-  color: var(--accent-white);
+  color: var(--clr-green);
 }
 
 .error-container {
@@ -122,15 +128,21 @@ ul, ol {
   transition: var(--default-transition);
   border: none;
   border-radius: var(--border-radius-1);
-  color: var(--accent-white);
+  color: var(--clr-gray);
   font-weight: bold;
   font-size: var(--input-font-size);
   background-color: var(--bg-main);
   transition: all 100ms ease-in;
+  cursor: pointer;
 }
 
 .form-field > select:focus-visible {
   outline: none;
+  color: white;
+}
+
+.form-field > select:hover {
+  color: white;
 }
 
 .form-field > input {
@@ -139,14 +151,22 @@ ul, ol {
   font-size: var(--input-font-size);
   font-weight: bold;
   border: none;
-  color: var(--accent-white);
+  color: var(--clr-gray);
   background-color: var(--bg-main);
   transition: all 100ms ease-in;
 }
 
 ::-webkit-calendar-picker-indicator { 
-  background-color: var(--accent-white); 
+  background-color: var(--clr-gray); 
   cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator:hover { 
+  background-color: white;
+}
+
+.form-field > input:hover {
+  color: white;
 }
 
 .form-field > input:focus-visible {
@@ -172,6 +192,35 @@ ul, ol {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.length-field {
+  display: flex;
+}
+
+.length-option {
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--bg-main);
+  color: var(--clr-gray);
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+}
+
+.length-option:hover {
+  color: white;
+}
+
+.selected {
+  color: white;
+}
+
+
+
+
 textarea {
   padding: .5em .5em 1em 1em;
   max-width: 10px;
@@ -195,7 +244,7 @@ textarea:focus-visible {
 }
 
 .analysis-title {
-  color: var(--accent-white);
+  color: var(--clr-green);
 }
 
 .analysis-container {
@@ -263,12 +312,16 @@ select:focus-visible {
 }
 
 .invoices-container {
-  padding: 1em 3em;
+  padding: 1em 0em;
+  display: flex;
+  justify-content: center;
 }
 
 .invoices-container > ul {
   display: flex;
+  flex-direction: column;
   justify-content: left;
+  
 }
 
 .text-bold {
@@ -277,13 +330,46 @@ select:focus-visible {
 }
 
 .invoice-item {
-  color: var(--clr-orange);
+  display: flex;
   font-size: 1.5em;
+  margin-right: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 40px;
+}
+
+.client-name {
+  margin: 0;
+  margin-right: 10px;
+  min-width: 8ch;
+  
+}
+
+.client-name-container {
+  display: flex;
+  justify-content: right;
+  text-align: right;
+}
+
+.total_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-left: 50px;
+  margin-top: 40px;
 }
 
 .total_owed {
-  color: var(--clr-money)
+  margin-right: 5px;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
+
+.underline {
+  border-bottom: 2px solid black;
+}
+
 
 .monthly-search__outer > select {
   background-color: var(--bg-main);
