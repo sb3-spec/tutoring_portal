@@ -38,6 +38,10 @@ ul, ol {
   color: var(--clr-green);
 }
 
+.empty-field-warning {
+  outline: 2px solid red;
+}
+
 .hub__outer {
   /* background-image: url("../assets/backgrounds/bg-1.jpg");
   background-repeat: no-repeat; */
